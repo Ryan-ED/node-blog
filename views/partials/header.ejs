@@ -2,16 +2,38 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js has-navbar-fixed-top"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Node.js Blog</title>
         <meta name="description" content="Simple blog application with Node.js. Built using Node.js, Express.js, Passport.js, EJS and MongoDB.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
+    <nav class="navbar is-fixed-top container is-fluid" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/"><i class="far fa-lightbulb fa-2x"></i></a>
+        
+            <button class="button navbar-burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/blogs"><i class="far fa-clone"></i> &nbsp; Blogs</a>
+                <a class="navbar-item" href="/blogs/new"><i class="far fa-plus-square"></i> &nbsp; New post</a>
+            </div>
+            <div class="navbar-end">
+                <a class="navbar-item" href="/login"><i class="fas fa-user"></i> &nbsp; Login</a>
+                <a class="navbar-item" href="/register"><i class="fas fa-sign-out-alt"></i> &nbsp; Sign Up</a>                
+            </div>
+        </div>
+    </nav>

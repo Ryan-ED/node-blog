@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 //App config
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname + "/public"));
 
 //Mongo config
 mongoose.connect("mongodb://localhost/node_blog");
@@ -32,6 +33,20 @@ app.get('/blogs', (req, res) => {
     .catch((err) => {
         console.log(err.message);
         res.redirect("/");
+    });
+});
+
+app.get('/blogs/new', (req, res) => {
+    res.render("new");
+});
+
+app.post('/blogs', (req, res) => {
+    // res.send(JSON.stringify(req.body.blog));
+    req.body.blog.author = "Ryan Daniels";
+    Blog.create(req.body.blog).then((blog) => res.redirect("/blogs"))
+    .catch((err) => {
+        console.log(err.message);
+        res.redirect("/blogs/new");
     });
 });
 
