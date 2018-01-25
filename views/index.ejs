@@ -2,4 +2,14 @@
 
 <h1>All the blogz</h1>
 
+<% blogs.forEach((blog) => { %>
+
+    <div>
+        <h3><%= blog.title %></h3>
+        <h5>by <%= blog.author %></h5>
+        <p><%= blog.body %></p>
+    </div>
+
+<% }) %>
+
 <% include ./partials/footer %>
