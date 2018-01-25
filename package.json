@@ -1,0 +1,36 @@
+{
+  "name": "node-blog",
+  "version": "1.0.0",
+  "description": "\"Simple blog application with Node.js. Serves as practice on working with Node and other JavaScript technologies to make full stack applications\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryan-ED/node-blog.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "javascript",
+    "html",
+    "css",
+    "express",
+    "mongoose",
+    "ejs",
+    "mongodb"
+  ],
+  "author": "Ryan Daniels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryan-ED/node-blog/issues"
+  },
+  "homepage": "https://github.com/Ryan-ED/node-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.1"
+  }
+}
